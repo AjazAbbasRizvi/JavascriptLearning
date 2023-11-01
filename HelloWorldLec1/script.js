@@ -15,7 +15,7 @@ function varLetScope() {
 
   console.log(x); // It Will print 10
   var x = 2;
-  console.log(x); // It Will print 2
+  console.log(x); // It Will print 2 
 }
 
 varLetScope();
