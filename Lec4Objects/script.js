@@ -187,12 +187,13 @@ let [FUser, SUSer, THUSer] = User1;
 // console.log(SUSer);
 // console.log(THUSer);
 
-// Now Destructuring the Name OF the First USer and Age of the Seocnd User and the entire third Object
+// Now Destructuring the Name OF the First USer and rest of the value in the allvalue varibale and Age of the Seocnd User and the entire third Object
 
-let [{ Name: UserName }, { Age: UserAge }, User3] = User1;
+let [{ Name: UserName, ...allvalue }, { Age: UserAge }, User3] = User1;
 // console.log(UserName);
 // console.log(UserAge);
 // console.log(User3);
+// console.log(allvalue);
 
 // Now Skiping the first USer and Grabbing the SecondUSer Age and ThirdUSer NAme
 
