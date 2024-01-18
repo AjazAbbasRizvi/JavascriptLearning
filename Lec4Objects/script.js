@@ -172,7 +172,7 @@ for (const user of User) {
 
 //--------------------------------------------------------------------------------------------------------------------------------------
 
-// Nested Destructuring 
+// Nested Destructuring
 
 const User1 = [
   { Name: "Ajaz", Age: 27 },
@@ -180,23 +180,51 @@ const User1 = [
   { Name: "Rizvi", Age: 29 },
 ];
 
-// Now first we will get all the object in the seprate form 
+// Now first we will get all the object in the seprate form
 
 let [FUser, SUSer, THUSer] = User1;
 // console.log(FUser);
 // console.log(SUSer);
 // console.log(THUSer);
 
-// Now Destructuring the Name OF the First USer and Age of the Seocnd User and the entire third Object 
+// Now Destructuring the Name OF the First USer and Age of the Seocnd User and the entire third Object
 
-let[{Name:UserName}, {Age: UserAge}, User3 ] = User1;
+let [{ Name: UserName }, { Age: UserAge }, User3] = User1;
 // console.log(UserName);
 // console.log(UserAge);
 // console.log(User3);
 
 // Now Skiping the first USer and Grabbing the SecondUSer Age and ThirdUSer NAme
 
-let [, {Age : UserAge2}, {Name : UserName3}] = User1;
-console.log(UserAge2);
-console.log(UserName3);
+let [, { Age: UserAge2 }, { Name: UserName3 }] = User1;
+// console.log(UserAge2);
+// console.log(UserName3);
+
+//--------------------------------------------------------------------------------------------------------------------------------------
+
+// Optional Chaining
+
+// We have a object called person which have a property name and another object(address) in the person which have property house number
+// now we have a condition were we will get the adress property in future, To avaoid any error we use optional chaining
+
+const person = {
+  name: "ajaz",
+};
+
+const address = {
+  housenumber: 1234,
+};
+
+// console.log(person?.name);
+// console.log(person?.address?.housenumber); -> for this one we will not get error instead we will get undefined
+
+person.Address = address;
+
+// now person have a new property address if we do this again 
+
+console.log(person?.name);
+console.log(person?.Address?.housenumber);
+
+// now this time everything works fine 
+
 
