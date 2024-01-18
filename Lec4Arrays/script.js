@@ -62,10 +62,11 @@ function Spilce(array, startIndex, EndIndex) {
 // Spread Opretaors 
 
 let spArray = [1,2,3]
-let spArray1 = ["A", "B"]
+let spArray1 = ["A", "B", ...spArray]
 
 let SpreadArray = [...spArray, ...spArray1, "NewItem"];
-// console.log(SpreadArray);
+
+console.log(SpreadArray);
 
 // -------------------------------------------------------------------------------------------------------------------------------------------
 
